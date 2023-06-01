@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\landingController;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\profileController;
+use App\Http\Controllers\eventsController;
+use App\Http\Controllers\newsController;
+use App\Http\Controllers\contactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,26 +19,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-})->name('landing');
 
-Route::get('/home', function(){
-    return view('home');
-})->name('home');
+Route::get('/landing',[landingController::class,'index'])->name('landing');
 
-Route::get('/profile', function(){
-    return view('profile');
-})->name('profile');
+Route::get('/home',[homeController::class,'index'])->name('home');
 
-Route::get('/events', function(){
-    return view('events');
-})->name('events');
+Route::get('/profile',[profileController::class,'index'])->name('profile');
 
-Route::get('/news', function(){
-    return view('news');
-})->name('news');
+Route::get('/events',[eventsController::class,'index'])->name('events');
 
-Route::get('/contact', function(){
-    return view('contact');
-})->name('contact');
+Route::get('/news',[newsController::class,'index'])->name('news');
+
+Route::get('/contact',[contactController::class,'index'])->name('contact');
+Route::get('contact/submit',[contactController::class,'submit'])->name('contact.submit');
