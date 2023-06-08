@@ -15,6 +15,7 @@
             <a href="{{route('events')}}">Events</a>
             <a href="{{route('news')}}">News</a>
             <a href="{{route('contact')}}">Contact Us</a>
+            <a href="{{ route('login') }}">Log In</a>
         </nav>
     </header>
     
