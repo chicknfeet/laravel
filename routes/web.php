@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\landingController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\profileController;
